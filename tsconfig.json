@@ -26,7 +26,7 @@
     "baseUrl": "./",
     "types": ["node", "jest", "reflect-metadata"],
     "paths": {
-      "*": ["src/*", "node_modules/*"]
+      "*": ["node_modules/*"]
     },
     "jsx": "react"
   }

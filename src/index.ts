@@ -11,3 +11,5 @@ export const sum = (a: number, b: number) => {
 };
 
 export const ninja = myContainer.get<Warrior>(TYPES.Warrior);
+
+export const enemy = myContainer.get<Warrior>(TYPES.Warrior);
