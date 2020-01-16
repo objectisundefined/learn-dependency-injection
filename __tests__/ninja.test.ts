@@ -1,8 +1,8 @@
 import { ninja } from '../src';
 
-describe('blah', () => {
+describe('ninja', () => {
   it('works', () => {
-    expect(ninja.fight()).toEqual('cut!'); // true
-    expect(ninja.sneak()).toEqual('hit!'); // true
+    expect(ninja.fight()).toEqual('cut!');
+    expect(ninja.sneak()).toEqual('hit!');
   });
 });

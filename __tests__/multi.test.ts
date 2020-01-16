@@ -33,7 +33,7 @@ describe('multi injection', () => {
   it('works', () => {
     const ninja = container.get<Ninja>('Ninja');
 
-    expect(ninja.fight()).toEqual('cut!'); // true
-    expect(ninja.sneak()).toEqual('hit!'); // true
+    expect(ninja.fight()).toEqual('cut!');
+    expect(ninja.sneak()).toEqual('hit!');
   });
 });
