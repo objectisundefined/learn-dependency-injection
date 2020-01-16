@@ -52,7 +52,7 @@ container.bind<TodoRepository>('TodoRepository').to(TodoRepository);
 container.bind<TodoService>('TodoService').to(TodoService);
 container.bind<TodoController>('TodoController').to(TodoController);
 
-describe('blah', () => {
+describe('property injection', () => {
   it('works', () => {
     const controller = container.get<TodoController>('TodoController');
     const t1: Result<Todo> = JSON.parse(controller.fetchTodo(1));
