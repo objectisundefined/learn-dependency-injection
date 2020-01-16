@@ -1,5 +1,5 @@
 {
-  "include": ["src", "types", "test"],
+  "include": ["src", "types", "__tests__"],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
@@ -20,11 +20,14 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
+    "types": ["node", "jest", "reflect-metadata"],
     "paths": {
       "*": ["src/*", "node_modules/*"]
     },
-    "jsx": "react",
-    "esModuleInterop": true
+    "jsx": "react"
   }
 }
