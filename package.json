@@ -1,17 +1,33 @@
 {
+  "name": "use-inversify",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/use-inversify.esm.js",
   "files": [
     "dist"
   ],
+  "author": "objectisundefined",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build"
+  },
+  "dependencies": {
+    "inversify": "^5.0.1",
+    "inversify-inject-decorators": "^3.1.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.7",
+    "husky": "^4.0.10",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.4"
   },
   "peerDependencies": {},
   "husky": {
@@ -25,20 +41,26 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "use-inversify",
-  "author": "objectisundefined",
-  "module": "dist/use-inversify.esm.js",
-  "devDependencies": {
-    "@types/jest": "^24.9.0",
-    "@types/node": "^13.1.7",
-    "husky": "^4.0.10",
-    "tsdx": "^0.12.3",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.4"
-  },
-  "dependencies": {
-    "inversify": "^5.0.1",
-    "inversify-inject-decorators": "^3.1.0",
-    "reflect-metadata": "^0.1.13"
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/?(*.)+(spec|test).[tj]s?(x)",
+      "**/__tests__/**/?(*-)(test|spec).[jt]s?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/",
+      "/dist/",
+      "/types/"
+    ],
+    "testPathIgnorePatterns": []
   }
 }
